@@ -1,13 +1,13 @@
 :root {
-  --bg: #ffffff33;
+  --bg: #ffffff;
   --text: #111111;
-  --accent: #5a7497;
+  --accent: #0077cc;
 }
 
 [data-theme='dark'] {
   --bg: #111111;
   --text: #f0f0f0;
-  --accent: #e2ecf1;
+  --accent: #66ccff;
 }
 
 * {
@@ -22,8 +22,6 @@ body {
   background-color: var(--bg);
   color: var(--text);
   transition: background-color 0.3s, color 0.3s;
-  width: 100vw;
-  overflow-x: hidden;
 }
 
 main {
@@ -41,16 +39,13 @@ section {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background: transparent;
+  background: none;
   border: 2px solid var(--accent);
   color: var(--accent);
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #toggle-theme:hover {
@@ -58,29 +53,10 @@ section {
   color: var(--bg);
 }
 
-/* Scroll Down Button */
-#scroll-down {
-  margin-top: 1rem;
-  padding: 0.8rem 1.2rem;
-  font-size: 1.5rem;
-  background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#scroll-down:hover {
-  background: var(--accent);
-  color: var(--bg);
-}
-
 /* Highlight Section */
 .highlight {
-  width: 100%;
   height: 100vh;
-  background: url('images/highlight.jpg') center center / cover no-repeat;
+  background: url('images/highlight.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,9 +65,8 @@ section {
 
 /* Ending Section */
 .end {
-  width: 100%;
   height: 100vh;
-  background: url('images/recharge.jpg') center center / cover no-repeat;
+  background: url('images/recharge.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,82 +79,31 @@ section {
   color: rgb(223, 217, 210);
   padding: 2rem;
   border-radius: 10px;
-  max-width: 90%;
 }
 
-/* Links Section - Floating Bubbles */
-#links ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  justify-content: center;
+#scroll-down {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-#links li {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 0.8rem 1.5rem;
-  border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+#scroll-down:hover {
+  background: white;
+  color: black;
 }
 
-#links li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
+/* Links Section */
 a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.9rem;
-  color: var(--text);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* Mobile Responsive Styling */
-@media (max-width: 768px) {
-.highlight,
-.end {
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-  .overlay {
-    padding: 1.2rem;
-  }
-
-  #toggle-theme {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  #scroll-down {
-    font-size: 1.2rem;
-    padding: 0.6rem 1rem;
-  }
-
-  a {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.9rem;
-  }
 }
