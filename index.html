@@ -1,233 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page / Jude</title>
-  <style>
-    :root {
-      --bg: #ffffff33;
-      --text: #111111;
-      --accent: #5a7497;
-    }
-
-    [data-theme='dark'] {
-      --bg: #111111;
-      --text: #f0f0f0;
-      --accent: #578ba5;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      transition: background-color 0.3s, color 0.3s;
-      line-height: 1.6;
-    }
-
-    main {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    #toggle-theme {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: transparent;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      padding: 0.6rem 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      z-index: 1000;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    #toggle-theme:hover {
-      background-color: var(--accent);
-      color: var(--bg);
-    }
-
-    #scroll-down {
-      margin-top: 1rem;
-      padding: 0.8rem 1.2rem;
-      font-size: 1.5rem;
-      background: none;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    #scroll-down:hover {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
-    .highlight {
-      width: 100%;
-      height: 100vh;
-      background: url('images/highlight.jpg') center center / cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .overlay {
-      text-align: center;
-      background: rgba(0, 0, 0, 0.281);
-      color: rgb(223, 217, 210);
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 90%;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      display: inline-block;
-      padding: 0.6rem 1rem;
-      margin: 0.5rem 0;
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      transition: all 0.3s ease;
-      background-color: rgba(255, 255, 255, 0.03);
-      font-size: 1rem;
-    }
-
-    a:hover {
-      background-color: var(--accent);
-      color: var(--bg);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.9rem;
-      color: var(--text);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding-top: 3rem;
-      }
-
-      h1, h2 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      #toggle-theme {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
-
-      .overlay {
-        padding: 1.2rem;
-      }
-
-      .highlight {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      a {
-        font-size: 0.9rem;
-        padding: 0.5rem 0.8rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home Page / Jude</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <button id="toggle-theme">🌙</button>
 
 <main>
-  <section id="Header">
-    <h2>-Jude</h2>
-    <p>I am an aspiring Infosec researcher</p>
-    <p>This site serves as a light frontend & introductory insight to my online presence</p>
-  </section>
+<section id="Header">
+<h2>-Jude</h2>
+<p>I am an aspiring Infosec researcher</p>
+<p>This site serves as a light frontend & introductory insight to my online presence</p>
+</section>
 </main>
 
 <section class="highlight">
-  <div class="overlay">
-    <h1>Welcome</h1>
-    <p>Take a second to enjoy nature, then scroll down to find out more about me</p>
-    <button id="scroll-down">⬇</button>
-  </div>
+<div class="overlay">
+<h1>Welcome</h1>
+<p>Take a second to enjoy nature, then scroll down to find out more about me</p>
+<button id="scroll-down">⬇</button>
+</div>
 </section>
 
 <main>
-  <section id="Contact">
-    <h2>Contact</h2>
-    <p>c0gwh33l@tutanota.io <u>78EF EAEC 0E14 B9BD 5BF7 A31C EF31 E0ED 89DA 48F5</u></p>
-    <p>This is merely my first-level contact address and is destined to change. It is not my primary email and may receive slower replies. Text-based messaging only.</p>
-  </section>
+<section id="Contact">
+<h2>Contact</h2>
+<p>c0gwh33l@tutanota.io <u>78EF EAEC 0E14 B9BD 5BF7 A31C EF31 E0ED 89DA 48F5</u></p>
+<p>This is merely my first-level contact address and is destined to change. It is not my primary email and may receive slower replies. Text-based messaging only.</p>
+</section>
 
-  <section id="links">
-    <h2>Links</h2>
-    <ul>
-      <li><a href="/about.html">About Me</a></li>
-      <li><a href="https://github.com/C0gwh33l" target="_blank">GitHub</a></li>
-    </ul>
-  </section>
+<section id="links">
+<h2>Links</h2>
+<ul>
+<li><a href="/about.html">About Me</a></li>
+<li><a href="https://github.com/C0gwh33l" target="_blank">GitHub</a></li>
+</ul>
+</section>
 </main>
 
 <footer>
-  <p>© 2025 Jude / C0gwh33l</p>
+<p>© 2025 Jude / C0gwh33l</p>
 </footer>
 
-<script>
-  // Theme toggle
-  document.getElementById('toggle-theme').onclick = () => {
-    const root = document.documentElement;
-    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    root.setAttribute('data-theme', next);
-  };
-
-  // Smooth scroll to #links
-  document.getElementById('scroll-down').onclick = () => {
-    scrollToSection(document.getElementById('links'), 1000);
-  };
-
-  function scrollToSection(el, duration) {
-    const start = window.scrollY;
-    const end = el.getBoundingClientRect().top + start;
-    const diff = end - start;
-    const startTime = performance.now();
-    const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-
-    (function step(now) {
-      const t = Math.min((now - startTime) / duration, 1);
-      window.scrollTo(0, start + diff * ease(t));
-      if (t < 1) requestAnimationFrame(step);
-    })(startTime);
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
