@@ -74,31 +74,42 @@ section {
   color: var(--bg);
 }
 
-/* Highlight Section */
-.highlight {
-  background: url('images/highlight.jpg') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Responsive Background Section */
+.responsive-section {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-
-/* Ending Section */
-.end {
-  background: url('images/recharge.jpg') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.responsive-section::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
 }
 
-.overlay {
+.responsive-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.responsive-section .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  background: rgba(0, 0, 0, 0.281);
+  background: rgba(0, 0, 0, 0.4);
   color: rgb(223, 217, 210);
   padding: 2rem;
   border-radius: 10px;
+  max-width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 1;
 }
 
 /* Links Section - Floating Bubbles */
@@ -139,14 +150,4 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
   color: var(--text);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.highlight,
-.end {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: auto;
-  min-height: 100vh;
-}
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);}
