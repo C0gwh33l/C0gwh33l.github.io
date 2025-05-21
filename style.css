@@ -93,11 +93,6 @@ section {
   }
 }
 
-#scroll-down:hover {
-  background: var(--accent);
-  color: var(--bg);
-}
-
 /* Responsive Background Section */
 .responsive-section {
   position: relative;
