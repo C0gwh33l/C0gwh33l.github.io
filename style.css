@@ -34,7 +34,6 @@ section {
   margin-bottom: 3rem;
 }
 
-/* Toggle Theme Button */
 #toggle-theme {
   position: fixed;
   top: 1rem;
@@ -45,7 +44,6 @@ section {
   padding: 0.6rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 1000;
   font-size: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -56,11 +54,12 @@ section {
   color: var(--bg);
 }
 
-/* Scroll Down Button */
 #scroll-down {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
+  width: clamp(50px, 10vw, 70px);
+  height: clamp(50px, 10vw, 70px);
   padding: clamp(0.6rem, 2vw, 1rem);
   font-size: clamp(1.2rem, 4vw, 1.5rem);
   background: none;
@@ -68,13 +67,10 @@ section {
   color: var(--accent);
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: clamp(50px, 10vw, 70px);
-  height: clamp(50px, 10vw, 70px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2; /* above overlay background */
+  transition: all 0.3s ease;
 }
 
 #scroll-down:hover {
@@ -82,7 +78,6 @@ section {
   color: var(--bg);
 }
 
-/* Responsive Background Section */
 .responsive-section {
   position: relative;
   width: 100%;
@@ -102,25 +97,8 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
 }
 
-.responsive-section .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: rgba(0, 0, 0, 0.199);
-  color: rgb(223, 217, 210);
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 90%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-  z-index: 1;
-}
-
-/* Links Section - Floating Bubbles */
 #links ul {
   display: flex;
   flex-wrap: wrap;
@@ -150,7 +128,6 @@ a {
   font-size: 1rem;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -158,6 +135,5 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
   color: var(--text);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);}
-
-  
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
