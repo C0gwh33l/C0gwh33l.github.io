@@ -76,6 +76,9 @@ section {
 
 /* Highlight Section */
 .highlight {
+  width: 100%;
+  height: auto;
+  max-width: 100%;  
   height: 100vh;
   background: url('images/highlight.jpg') center/cover no-repeat;
   display: flex;
@@ -86,6 +89,9 @@ section {
 
 /* Ending Section */
 .end {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   height: 100vh;
   background: url('images/recharge.jpg') center/cover no-repeat;
   display: flex;
