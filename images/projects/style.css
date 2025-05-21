@@ -1,0 +1,144 @@
+:root {
+  --bg: #ffffff33;
+  --text: #111111;
+  --accent: #5a7497;
+}
+
+[data-theme='dark'] {
+  --bg: #111111;
+  --text: #f0f0f0;
+  --accent: #e2ecf1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Toggle Theme Button */
+#toggle-theme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#toggle-theme:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+/* Scroll Down Button */
+#scroll-down {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.5rem;
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#scroll-down:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Highlight Section */
+.highlight {
+  height: 100vh;
+  background: url('images/highlight.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Ending Section */
+.end {
+  height: 100vh;
+  background: url('images/recharge.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.281);
+  color: rgb(223, 217, 210);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Links Section - Floating Bubbles */
+#links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+#links li {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#links li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: var(--text);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
