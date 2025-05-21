@@ -109,12 +109,12 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.205);
   color: rgb(223, 217, 210);
   padding: 2rem;
   border-radius: 10px;
   max-width: 90%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
   z-index: 1;
 }
 
