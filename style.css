@@ -56,10 +56,9 @@ section {
   color: var(--bg);
 }
 
-/* Scroll Down Button */
 #scroll-down {
   margin-top: 1rem;
-  padding: clamp(0.6rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 2vw, 1rem);
   font-size: clamp(1.2rem, 4vw, 1.5rem);
   background: none;
   border: 2px solid var(--accent);
@@ -69,11 +68,30 @@ section {
   transition: all 0.3s ease;
   width: clamp(50px, 10vw, 70px);
   height: clamp(50px, 10vw, 70px);
-  display: center;
+  display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
+.scroll-label {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Hide label text on smaller screens */
+@media (max-width: 600px) {
+  .scroll-label {
+    display: none;
+  }
+
+  #scroll-down {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
 
 #scroll-down:hover {
   background: var(--accent);
